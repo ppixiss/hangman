@@ -72,7 +72,8 @@ public class Hangman {
 
         while (true) {
             String validationStart = scanner.nextLine();
-            switch (validationStart) {
+
+            switch (validationStart.toLowerCase()) {
                 case PLAY:
                     return true;
                 case EXIT:
@@ -188,7 +189,8 @@ public class Hangman {
 
         while (true) {
             String validationRestart = scanner.nextLine();
-            switch (validationRestart) {
+
+            switch (validationRestart.toLowerCase()) {
                 case YES_RESTART:
                     return true;
                 case NO_RESTART:
