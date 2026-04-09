@@ -1,5 +1,5 @@
-public class HangmanPrint {
-    public static void drawHangman(int mistakes) {
+public class HangmanPrinter {
+    public static void draw(int mistakes) {
         switch (mistakes) {
             case 0:
                 System.out.println("""
