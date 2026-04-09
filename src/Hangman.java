@@ -9,10 +9,8 @@ import java.util.Scanner;
 
 public class Hangman {
     public static final int MAX_MISTAKES = 6;
-    public static final String PLAY = "играть";
-    public static final String EXIT = "выйти";
-    public static final String YES_RESTART = "да";
-    public static final String NO_RESTART = "нет";
+    public static final String PLAY = "1";
+    public static final String EXIT = "0";
 
     public static int rightLetters;
     public static int mistakes;
@@ -186,18 +184,17 @@ public class Hangman {
     }
 
     public static boolean isGameRestart() {
-        System.out.println("Хотите начать игру заново? (" + YES_RESTART + "/" + NO_RESTART + ")");
-
+        System.out.println("Хотите начать игру заново? " + "Да - " + PLAY + "; Нет - " + EXIT);
         while (true) {
             String validationRestart = scanner.nextLine();
 
             switch (validationRestart.toLowerCase()) {
-                case YES_RESTART:
+                case PLAY:
                     return true;
-                case NO_RESTART:
+                case EXIT:
                     return false;
                 default:
-                    System.out.println("Некорректный ввод! Введите " + YES_RESTART + " или " + NO_RESTART);
+                    System.out.println("Некорректный ввод! Введите " + PLAY + " или " + EXIT);
             }
         }
     }
