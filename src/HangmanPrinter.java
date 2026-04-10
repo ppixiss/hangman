@@ -1,82 +1,66 @@
-public class HangmanPrinter {
+public final class HangmanPrinter {
+
+    private static final String[] PICTURES = {
+            """
+    +----
+    |
+    |
+    |
+    |
+    -----
+    """,
+            """
+     +---+
+     |   |
+     |   ☺
+     |
+     |
+     -----
+     """,
+            """
+     +---+
+     |   |
+     |   ☺
+     |   |
+     |
+     -----
+     """,
+            """
+     +---+
+     |   |
+     |   ☺
+     |   |\\
+     |
+     -----
+     """,
+            """
+     +---+
+     |   |
+     |   ☺
+     |  /|\\
+     |
+     -----
+     """,
+            """
+     +---+
+     |   |
+     |   ☺
+     |  /|\\
+     |    \\
+     -----
+     """,
+            """
+     +---+
+     |   |
+     |   ☺
+     |  /|\\
+     |  / \\
+     -----
+     """,
+    };
+
     public static void draw(int mistakes) {
-        switch (mistakes) {
-            case 0:
-                System.out.println("""
-                        +---+
-                        |   |
-                        |
-                        |
-                        |
-                        |
-                        =======""");
-                break;
-
-            case 1:
-                System.out.println("""
-                        +---+
-                        |   |
-                        |   ☺
-                        |
-                        |
-                        |
-                        =======""");
-                break;
-
-            case 2:
-                System.out.println("""
-                        +---+
-                        |   |
-                        |   ☺
-                        |   |
-                        |
-                        |
-                        =======""");
-                break;
-
-            case 3:
-                System.out.println("""
-                        +---+
-                        |   |
-                        |   ☺
-                        |   |\\
-                        |
-                        |
-                        =======""");
-                break;
-
-            case 4:
-                System.out.println("""
-                        +---+
-                        |   |
-                        |   ☺
-                        |  /|\\
-                        |
-                        |
-                        =======""");
-                break;
-
-            case 5:
-                System.out.println("""
-                        +---+
-                        |   |
-                        |   ☺
-                        |  /|\\
-                        |    \\
-                        |
-                        =======""");
-                break;
-
-            case 6:
-                System.out.println("""
-                        +---+
-                        |   |
-                        |   ☺
-                        |  /|\\
-                        |  / \\
-                        |
-                        =======""");
-                break;
-        }
+        String picture = PICTURES[mistakes];
+        System.out.println(picture);
     }
 }
